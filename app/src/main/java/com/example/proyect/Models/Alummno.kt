@@ -1,0 +1,13 @@
+package com.example.proyect.Models
+
+import kotlinx.serialization.Serializable
+
+@Serializable
+data class Alumnno(
+    val id: Long,
+    val nombres: String? = null,
+    val correo: String? = null,
+    val telefono: String? = null,
+    val paralelo: String? = null,
+    val foto: String? = null
+)
