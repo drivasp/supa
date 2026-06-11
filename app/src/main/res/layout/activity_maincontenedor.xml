@@ -35,7 +35,8 @@
             android:id="@+id/listaCategorias"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none" />
+            android:inputType="none"
+            app:simpleItems="@array/niveles" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
