@@ -3,7 +3,7 @@ package com.example.proyect.Models
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Alumnno(
+data class Alumno(
     val id: Long,
     val nombres: String? = null,
     val correo: String? = null,

@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
-import com.example.proyect.Models.Alumnno
+import com.example.proyect.Models.Alumno
 import com.example.proyect.service.SupabaseManager
 import com.google.android.material.progressindicator.CircularProgressIndicator
 import io.github.jan.supabase.exceptions.RestException
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                     .select {
                         order("nombres", Order.ASCENDING)
                     }
-                    .decodeList<Alumnno>()
+                    .decodeList<Alumno>()
                 var texto = ""
                 for (alumno in alumnos) {
                     texto += "Nombres: " + alumno.nombres + "\n"

@@ -7,7 +7,7 @@ import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.example.proyect.Adapters.AlumnoAdapter
-import com.example.proyect.Models.Alumnno
+import com.example.proyect.Models.Alumno
 import com.example.proyect.Models.Materia
 import com.example.proyect.service.SupabaseErrorHandler
 import com.example.proyect.service.SupabaseManager
@@ -57,13 +57,13 @@ class maincontenedor : AppCompatActivity() {
 
         actvMaterias.setOnItemClickListener { _, _, _, _ ->
             lifecycleScope.launch {
-                var lstAlumnos = ArrayList<Alumnno>()
+                var lstAlumnos = ArrayList<Alumno>()
                 try {
                     lstAlumnos = ArrayList(
                         SupabaseManager.client
                             .from("alumnos")
                             .select { order("nombres", Order.ASCENDING) }
-                            .decodeList<Alumnno>()
+                            .decodeList<Alumno>()
                     )
                 } catch (e: RestException) {
                     SupabaseErrorHandler.show(this@maincontenedor, e)
